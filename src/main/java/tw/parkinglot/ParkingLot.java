@@ -19,4 +19,15 @@ public class ParkingLot {
             parkingLotCapacity-=1;
         }
     }
+
+
+    public void unPark(Car car) {
+            if(carList.contains(car)){
+                car.setCarStatus("UnParked");
+                parkingLotCapacity+=1;
+            }
+            else{
+                car.setCarStatus("Car is not in the ParkingLot!");
+            }
+    }
 }
